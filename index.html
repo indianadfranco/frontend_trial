@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./styles/demo.css">
+    <link rel="stylesheet" type="text/css" href="./styles/material-scrolltop.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a id="nav_mobile" href=""><img src="./images/menu.svg" alt=""></a>
+      <a class="nav_item" href="#home">Home</a>
+      <a class="nav_item" href="#highlights">Highlights</a>
+      <a class="nav_item" href="#contacts">Contacts</a>
+    </nav>
+  </header>
+
+  <div id="home" class="banner">
+    <div class="title">
+      <h1>Frontend Trial</h1>
+      <p>Build a Responsive Landing Page without Bootstrap or any other
+      CSS framework.</p>
+    </div>
+  </div>
+
+  <section id="highlights" class="cards">
+    <div class="card">
+      <div class="image creative">
+      </div>
+      <div class="card_title">
+        <p>Creativity</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image simple">
+      </div>
+      <div class="card_title">
+        <p>Simplicity</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image intuitive">
+      </div>
+      <div class="card_title">
+        <p>Vision</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contacts" class="contacts">
+    <div class="contact_text">
+      <h2>Contact me</h2>
+      <p>indianadfrnaco@gmail.com</p>
+    </div>
+  </section>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6480814037013!2d-9.163250584724103!3d38.72588796464066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19336ec0906649%3A0xc51846a8d67982d9!2sPlot%20-%20Content%20Agency%2C%20SA!5e0!3m2!1spt-PT!2spt!4v1569838548874!5m2!1spt-PT!2spt" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+  <footer>
+    <p>Icons made by https://www.flaticon.com/authors/smashicons</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <button class="material-scrolltop" type="button"></button>
+  <script src="./js/material-scrolltop.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+        $(document).ready(function() {
+            $('body').materialScrollTop({
+                revealElement: 'header',
+                revealPosition: 'bottom',
+                onScrollEnd: function() {
+                    console.log('Scrolling End');
+                }
+            });
+        });
+  </script>
+</body>
+</html>
