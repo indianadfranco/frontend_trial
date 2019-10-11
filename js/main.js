@@ -3,18 +3,19 @@ document.addEventListener('DOMContentLoaded' , init, false);
 function init() {
 
     let menu = document.getElementById('nav_mobile');
-    let x = document.getElementsByClassName("nav_item");
+    let item = document.getElementsByClassName("nav_item");
 
     menu.addEventListener('click', openMenu, false)
 
     function openMenu(e) {
       e.preventDefault();
-      for(var i = 0, length = x.length; i < length; i++) {
-        if (x[i].style.display === 'none') {
-          x[i].style.display = 'block';
+      for(var i = 0, length = item.length; i < length; i++) {
+        if (item[i].style.display === 'none') {
+          item[i].style.display = 'block';
         } else {
-          (x[i].style.display = "none");
+          (item[i].style.display = "none");
         }
       }
     }
+
 }

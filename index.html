@@ -5,8 +5,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles/main.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="./styles/demo.css">
-    <link rel="stylesheet" type="text/css" href="./styles/material-scrolltop.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -26,6 +26,12 @@
       <p>Build a Responsive Landing Page without Bootstrap or any other
       CSS framework.</p>
     </div>
+  </div>
+
+  <div class="fixed_btn">
+      <a href="#top">
+        <img class="fixed_btn-image" src="./images/top-arrow.svg" alt="">
+      </a>
   </div>
 
   <section id="highlights" class="cards">
@@ -66,20 +72,22 @@
     <p>Icons made by https://www.flaticon.com/authors/smashicons</p>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <button class="material-scrolltop" type="button"></button>
-  <script src="./js/material-scrolltop.js"></script>
   <script src="./js/main.js"></script>
   <script>
-        $(document).ready(function() {
-            $('body').materialScrollTop({
-                revealElement: 'header',
-                revealPosition: 'bottom',
-                onScrollEnd: function() {
-                    console.log('Scrolling End');
-                }
-            });
-        });
+
+    $(window).scroll(function() {
+      if($(document).scrollTop() > 400){
+        $(".fixed_btn").show();
+      } else {
+        $(".fixed_btn").hide();
+      }
+    });
+
+    $("a[href='#top']").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+
   </script>
 </body>
 </html>

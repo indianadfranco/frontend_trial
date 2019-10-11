@@ -63,6 +63,26 @@ nav {
   }
 }
 
+.fixed_btn {
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    height: 50px;
+    z-index: 999;
+    display: none;
+}
+
+.fixed_btn:hover {
+    bottom: 20px;
+    right: 45px;
+    height: 60px;
+}
+
+.fixed_btn-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .banner {
   height: 90vh;
   background: url('../images/bannerr.jpeg') no-repeat center;
